@@ -15,9 +15,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnOK(View view) {
+        //設定各屬性的值
         CheckBox chk;
         TextView txvShow;
         String msg = "";
+
+        //確認選項是否勾選，如果有就把內容加入msg字串中
         int[] id = {R.id.chkMina,R.id.chkMomo,R.id.chkSana,R.id.chkTzuyu};
         for(int i:id){
             chk=findViewById(i);
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         }
         txvShow=findViewById(R.id.txvShow);
 
+        //在txvShow顯示msg字串
         txvShow.setText(msg);
     }
 }
